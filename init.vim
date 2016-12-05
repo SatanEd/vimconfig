@@ -79,7 +79,17 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'alessandroyorba/despacio'
 Plug 'JulesWang/css.vim' 
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'yggdroot/indentline'
 call plug#end()
+
+let g:indentLine_color_term = 239
+let g:indentLine_color_tty_light = 7 " (default: 4)
+let g:indentLine_color_dark = 1 " (default: 2)
+let g:indentLine_setColors = 0
+set number
 
 autocmd FileType scss set iskeyword+=-
 
