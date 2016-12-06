@@ -71,7 +71,7 @@ Plug 'm2mdas/phpcomplete-extended'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/unite.vim'
 Plug 'jelera/vim-javascript-syntax'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 Plug 'othree/html5.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -83,7 +83,15 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'yggdroot/indentline'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'humiaozuzu/tabbar'
+Plug 'neomake/neomake'
 call plug#end()
+
+let g:neomake_javascript_jshint_maker = {
+    \ 'args': ['--verbose'],
+    \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
+    \ }
+let g:neomake_javascript_enabled_makers = ['jshint']
 
 let g:indentLine_color_term = 239
 let g:indentLine_color_tty_light = 7 " (default: 4)
